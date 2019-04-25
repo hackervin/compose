@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  vin:
+    image: 10.210.16.204:8084/mongo:latest
+    networks:
+     - default
+    logging:
+      driver: json-file
+    deploy:
+      restart_policy:
+        condition: on-failure
